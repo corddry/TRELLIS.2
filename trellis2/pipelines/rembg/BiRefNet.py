@@ -7,6 +7,9 @@ from PIL import Image
 
 class BiRefNet:
     def __init__(self, model_name: str = "ZhengPeng7/BiRefNet"):
+        # Override whatever pipeline.json passes (e.g. briaai/RMBG-2.0, which is CC BY-NC).
+        # ZhengPeng7/BiRefNet is the MIT-licensed upstream model RMBG-2.0 was fine-tuned from.
+        model_name = "ZhengPeng7/BiRefNet"
         self.model = AutoModelForImageSegmentation.from_pretrained(
             model_name, trust_remote_code=True
         )
