@@ -12,7 +12,7 @@ export TRITON_PTXAS_PATH="$(which ptxas)"
 
 # Log in to HuggingFace if required to download the models
 DIR="$PWD/models/hub"
-ls "$DIR/models--briaai--RMBG-2.0" \
+ls "$DIR/models--ZhengPeng7--BiRefNet" \
    "$DIR/models--facebook--dinov3-vitl16-pretrain-lvd1689m" \
    >/dev/null 2>&1 || \
    hf auth login
